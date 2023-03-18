@@ -32,3 +32,10 @@ mask.append('rect').attr('width', width).attr('height', height).attr('fill', 'bl
 
 mask.append('circle').attr('cx', width / 2)
 .attr('cy', height / 2).attr('r', 200).attr('fill', 'white');
+
+const mask2 = svg.append('mask').attr('id', 'circle-mask-2');
+
+mask2.append('rect').attr('width', width).attr('height', height).attr('fill', 'white');
+
+mask2.append('circle').attr('cx', width / 2)
+.attr('cy', height / 2).attr('r', 200).attr('fill', 'black');
