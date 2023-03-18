@@ -6,8 +6,8 @@ const svg = d3.select('body').append('svg');
 svg.attr('width', width);
 svg.attr('height', height);
 
-const n = 100;
-const marks = [];
+ const n = 100;
+/* const marks = [];
 for (let i = 0; i < n; i++) {
     marks.push({
         y: i * 20,
@@ -15,13 +15,13 @@ for (let i = 0; i < n; i++) {
         height: 10,
         mask: 'url(#circle-mask',
     });
-}
+}  */
 
 svg
 .selectAll('rect')
-.data(marks)
+.data(d3.range(n))
 .join('rect')
-.attr('y', (d) => d.y)
+.attr('y', (d) => d * 20)
 .attr('width', (d) => d.width)
 .attr('height', (d) => d.height)
 .attr('mask', (d) => d.mask)
